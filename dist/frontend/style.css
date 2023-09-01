@@ -1,0 +1,172 @@
+/*================ CSS Reset ================*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    scroll-behavior: smooth;
+}
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+#root,
+#__next {
+    isolation: isolate;
+}
+
+/*============= Global variables =============*/
+
+/*============= General styling =============*/
+
+body {
+    background-color: black;
+    color: antiquewhite;
+}
+
+header,
+nav,
+section,
+aside,
+footer {
+    outline: red solid 1px;
+}
+
+/*============= Grid Layout =============*/
+
+#site-layout-grid {
+    display: grid;
+    grid-template-areas:
+        "header"
+        "navbar"
+        "grid-area"
+        "footer";
+}
+
+#header {
+    grid-area: header;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 4rem;
+}
+
+#navbar {
+    grid-area: navbar;
+    margin: 1em;
+    height: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#grid-area {
+    margin: 0 1em;
+    grid-area: grid-area;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 0, 5em;
+}
+
+#grid-area article {
+    /* display: flex; */
+    justify-content: center;
+    padding: 0.5rem;
+    background-color: aquamarine;
+    height: 200px;
+    margin: 1em 1em;
+    text-align: center;
+}
+
+#grid-area article img {
+    height: 100px;
+    width: 200px;
+    object-fit: cover;
+}
+
+#grid-area article .item-favicon {
+    background-color: blueviolet;
+    text-align: end;
+    float: right;
+}
+
+#grid-area article .item-btns-container {
+    margin: 1em;
+    display: flex;
+    justify-content: space-around;
+}
+
+#footer {
+    grid-area: footer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 4rem;
+}
+
+#modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 200px;
+}
+
+/* media queries */
+
+@media (max-width: 479px) {
+    #grid-area {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 480px) {
+    #grid-area {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 769px) {
+    #grid-area {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (min-width: 1025px) {
+    #grid-area {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+@media (min-width: 1201px) {
+    #grid-area {
+        grid-template-columns: repeat(6, 1fr);
+    }
+}

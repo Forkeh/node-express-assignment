@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="#" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Music Artists CRUD with Express</title>
+</head>
+
+<body>
+    <main id="site-layout-grid">
+        <header id="header">
+            <h1>Music Artists CRUD with Express</h1>
+        </header>
+        <nav id="navbar">
+            <input type="text" name="search" placeholder="Search...">
+            <div class="nav-item-container">
+                <label for="sort">Sort by</label>
+                <select name="sort" id="sort">
+                    <option value="">1</option>
+                    <option value="">2</option>
+                </select>
+            </div>
+            <div class="nav-item-container">
+                <label for="filter">Filter by</label>
+                <select name="filter" id="filter">
+                    <option value="">1</option>
+                    <option value="">2</option>
+                </select>
+            </div>
+            <div class="nav-item-container">
+                <label for="checkbox-favorites">Only favorites</label>
+                <input type="checkbox" id="checkbox-favorites" value="is-favorite" name="favorite">
+            </div>
+            <button>Add artist</button>
+        </nav>
+        <section id="grid-area">
+            <!----------- Insert grid items ------------>
+            <article>
+                <div class="item-favicon">❤</div>
+                <h3>Eminem</h3>
+                <img src="https://cdn.hourdetroit.com/wp-content/uploads/sites/20/2022/05/Eminem.jpg"
+                    alt="artist picture">
+                <div class="item-btns-container">
+                    <button class="item-btn-details">Details</button>
+                    <button class="item-btn-update">Update</button>
+                </div>
+            </article>
+
+
+        </section>
+        <footer id="footer">Footer</footer>
+        <dialog id="modal">Modal</dialog>
+    </main>
+
+    <script src="./app.js"></script>
+
+</body>
+
+</html>
