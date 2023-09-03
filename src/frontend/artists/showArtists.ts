@@ -1,12 +1,15 @@
 import { detailsArtist } from "./detailsArtist.js";
-function showArtists(artists) {
-    document.querySelector("#grid-area").innerHTML = "";
+
+function showArtists(artists: Artist[]) {
+    document.querySelector("#grid-area")!.innerHTML = "";
+
     for (const artist of artists) {
         showArtist(artist);
     }
 }
-function showArtist(artist) {
-    const html = `
+
+function showArtist(artist: Artist) {
+    const html = /*html*/ `
     <article>
             <div class="item-favicon">❤</div>
             <h3>${artist.name}</h3>
@@ -18,12 +21,15 @@ function showArtist(artist) {
             </div>
     </article>
     `;
+
     document.querySelector("#grid-area")?.insertAdjacentHTML("beforeend", html);
+
     document
         .querySelector("#grid-area article:last-child .item-btn-details")
         ?.addEventListener("click", () => {
-        detailsArtist(artist);
-        console.log(artist.name);
-    });
+            detailsArtist(artist);
+            console.log(artist.name);
+        });
 }
+
 export { showArtists };
