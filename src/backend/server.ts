@@ -79,7 +79,29 @@ app.put("/data/:id", async (req, res) => {
 });
 
 //----- DELETE data ----- //
+app.delete("/data/:id", async (req, res) => {
+    const id: number = Number(req.params.id);
+    console.log(id);
 
+    const data: string = await fs.readFile("./dist/data/data.json", "utf8");
+
+    const artists: Artist[] = await JSON.parse(data);
+
+    const artistToDeleteIndex: number = artists.findIndex(
+        artist => artist.id === id
+    );
+
+    if (artistToDeleteIndex > -1) {
+        artists.splice(artistToDeleteIndex, 1);
+
+        fs.writeFile("./dist/data/data.json", JSON.stringify(artists));
+
+        res.send(artists);
+    } else {
+        console.log("Could not find artist matching ID");
+        res.send("Could not find artist matching ID");
+    }
+});
 
 //----- Start server on chosen port ----- //
 app.listen(port, () => {
