@@ -81,7 +81,6 @@ app.put("/data/:id", async (req, res) => {
 //----- DELETE data ----- //
 app.delete("/data/:id", async (req, res) => {
     const id: number = Number(req.params.id);
-    console.log(id);
 
     const data: string = await fs.readFile("./dist/data/data.json", "utf8");
 

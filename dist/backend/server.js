@@ -55,7 +55,6 @@ app.put("/data/:id", async (req, res) => {
 });
 app.delete("/data/:id", async (req, res) => {
     const id = Number(req.params.id);
-    console.log(id);
     const data = await fs.readFile("./dist/data/data.json", "utf8");
     const artists = await JSON.parse(data);
     const artistToDeleteIndex = artists.findIndex(artist => artist.id === id);
