@@ -33,6 +33,8 @@ app.get("/data", async (req, res) => {
 app.post("/data", async (req, res) => {
     try {
         const newArtist: Artist = req.body;
+        console.log(newArtist);
+        
 
         newArtist.id = new Date().getTime();
 

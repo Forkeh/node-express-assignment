@@ -22,6 +22,7 @@ app.get("/data", async (req, res) => {
 app.post("/data", async (req, res) => {
     try {
         const newArtist = req.body;
+        console.log(newArtist);
         newArtist.id = new Date().getTime();
         const data = await fs.readFile("./dist/data/data.json", "utf8");
         const artists = JSON.parse(data);

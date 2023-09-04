@@ -31,5 +31,16 @@
         "website": "https://www.kendricklamar.com/",
         "image": "https://media.gq.com/photos/57fff2db5f5ea58732dae1bb/master/w_1600%2Cc_limit/1616-GQ-CV01-01-KL-GQstyle.jpg",
         "shortDescription": "Kendrick Lamar is a critically acclaimed rapper known for his thought-provoking lyrics and social commentary."
+    },
+    {
+        "name": "Eminem",
+        "birthdate": "2023-09-13",
+        "activeSince": 1997,
+        "genres": ["jazz", "rap", "opera"],
+        "labels": "Slim Records",
+        "website": "http://www.eminem.com",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Eminem_-_Concert_for_Valor_in_Washington%2C_D.C._Nov._11%2C_2014_%282%29_%28Cropped%29.jpg",
+        "shortDescription": "Slim Shady",
+        "id": 1693845149813
     }
 ]

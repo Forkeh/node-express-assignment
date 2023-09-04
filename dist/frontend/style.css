@@ -145,7 +145,7 @@ footer {
     float: right;
 }
 
-/*============= Modal Detail View =============*/
+/*============= Modal Views =============*/
 
 .detail-view-wrapper img {
     display: flex;
@@ -154,6 +154,16 @@ footer {
     width: 200px;
     object-fit: cover;
 }
+
+
+.add-view-wrapper {
+display: flex;
+flex-direction: column;
+/* justify-content: center; */
+/* align-items: end; */
+}
+
+
 
 /*============= media queries =============*/
 
