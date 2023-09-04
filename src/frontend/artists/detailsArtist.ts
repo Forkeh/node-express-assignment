@@ -1,6 +1,7 @@
 import { openModal, clearModal, closeModal } from "../helpers/modal.js";
 
 function detailsArtist(artist: Artist) {
+    clearModal();
     openModal();
 
     const modalContent = document.querySelector("#modal-content");
@@ -8,7 +9,6 @@ function detailsArtist(artist: Artist) {
     modalContent!.innerHTML = /*html*/ `
 
     <div class="detail-view-wrapper">
-    
         <h2>${artist.name}</h2>
         <img src="${artist.image}"
                 alt="artist picture">

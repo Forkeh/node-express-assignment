@@ -1,11 +1,11 @@
-import { openModal } from "../helpers/modal.js";
+import { openModal, clearModal } from "../helpers/modal.js";
 function detailsArtist(artist) {
+    clearModal();
     openModal();
     const modalContent = document.querySelector("#modal-content");
     modalContent.innerHTML = `
 
     <div class="detail-view-wrapper">
-    
         <h2>${artist.name}</h2>
         <img src="${artist.image}"
                 alt="artist picture">

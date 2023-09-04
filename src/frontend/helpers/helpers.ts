@@ -1,4 +1,4 @@
-import {addArtist} from '../artists/addArtist.js'
+import { addArtist } from "../artists/addArtist.js";
 
 const modal = document.querySelector("#modal") as HTMLDialogElement;
 const btnCloseModal = document.querySelector("#btn-close-modal");
@@ -9,9 +9,7 @@ function activateButtons() {
         modal.close();
     });
 
-    btnAddArtist?.addEventListener('click', addArtist)
-
-
+    btnAddArtist?.addEventListener("click", addArtist);
 }
 
 export { activateButtons };

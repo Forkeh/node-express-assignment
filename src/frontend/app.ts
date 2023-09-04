@@ -6,7 +6,6 @@ window.addEventListener("load", app);
 
 async function app() {
     const artists: Artist[] = await getArtists();
-    // console.table(artists);
 
     showArtists(artists);
     activateButtons();
