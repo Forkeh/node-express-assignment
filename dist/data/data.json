@@ -1,1 +1,35 @@
-[{"id":67890,"name":"Ed Sheeran","birthdate":"17/02/1991","activeSince":2004,"genres":["Pop","Acoustic"],"labels":"Asylum, Atlantic Records","website":"https://www.edsheeran.com/","image":"https://example.com/edsheeran.jpg","shortDescription":"Ed Sheeran is a singer-songwriter known for his heartfelt lyrics and melodic pop songs."},{"id":54321,"name":"Rihanna","birthdate":"20/02/1988","activeSince":2005,"genres":["R&B","Pop","Dance"],"labels":"Roc Nation, Def Jam Recordings","website":"https://www.rihannanow.com/","image":"https://example.com/rihanna.jpg","shortDescription":"Rihanna is a multi-talented artist known for her distinctive voice, hit songs, and fashion influence."},{"id":98765,"name":"Kendrick Lamar","birthdate":"17/06/1987","activeSince":2003,"genres":["Hip Hop","Rap"],"labels":"Top Dawg Entertainment, Aftermath Entertainment, Interscope Records","website":"https://www.kendricklamar.com/","image":"https://example.com/kendricklamar.jpg","shortDescription":"Kendrick Lamar is a critically acclaimed rapper known for his thought-provoking lyrics and social commentary."}]
+[
+    {
+        "id": 67890,
+        "name": "Ed Sheeran",
+        "birthdate": "17/02/1991",
+        "activeSince": 2004,
+        "genres": ["Pop", "Acoustic"],
+        "labels": "Asylum, Atlantic Records",
+        "website": "https://www.edsheeran.com/",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Ed_Sheeran-6886_%28cropped%29.jpg/1200px-Ed_Sheeran-6886_%28cropped%29.jpg",
+        "shortDescription": "Ed Sheeran is a singer-songwriter known for his heartfelt lyrics and melodic pop songs."
+    },
+    {
+        "id": 54321,
+        "name": "Rihanna",
+        "birthdate": "20/02/1988",
+        "activeSince": 2005,
+        "genres": ["R&B", "Pop", "Dance"],
+        "labels": "Roc Nation, Def Jam Recordings",
+        "website": "https://www.rihannanow.com/",
+        "image": "https://i.pinimg.com/736x/93/52/69/935269a5f79c60676d12e3f9b06c22bd.jpg",
+        "shortDescription": "Rihanna is a multi-talented artist known for her distinctive voice, hit songs, and fashion influence."
+    },
+    {
+        "id": 98765,
+        "name": "Kendrick Lamar",
+        "birthdate": "17/06/1987",
+        "activeSince": 2003,
+        "genres": ["Hip Hop", "Rap"],
+        "labels": "Top Dawg Entertainment, Aftermath Entertainment, Interscope Records",
+        "website": "https://www.kendricklamar.com/",
+        "image": "https://media.gq.com/photos/57fff2db5f5ea58732dae1bb/master/w_1600%2Cc_limit/1616-GQ-CV01-01-KL-GQstyle.jpg",
+        "shortDescription": "Kendrick Lamar is a critically acclaimed rapper known for his thought-provoking lyrics and social commentary."
+    }
+]
