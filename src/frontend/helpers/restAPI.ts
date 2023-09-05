@@ -20,4 +20,36 @@ async function createArtistAPI(artist: Artist) {
     return response;
 }
 
-export { getArtistsAPI, createArtistAPI, artists };
+async function updateArtistAPI(artist: Artist) {
+    console.log("Update Artist API");
+    
+    const response: Response = await fetch(`${endpoint}/data/${artist.id}`, {
+        method: "PUT",
+        body: JSON.stringify(artist),
+        headers: {
+            "Content-Type": "application/json",
+        },
+    });
+
+    return response;
+}
+
+async function deleteArtistAPI(artist: Artist) {
+    const response: Response = await fetch(`${endpoint}/data/${artist.id}`, {
+        method: "DELETE",
+        body: JSON.stringify(artist),
+        headers: {
+            "Content-Type": "application/json",
+        },
+    });
+
+    return response;
+}
+
+export {
+    getArtistsAPI,
+    createArtistAPI,
+    deleteArtistAPI,
+    updateArtistAPI,
+    artists,
+};

@@ -1,4 +1,5 @@
 import { detailsArtist } from "./detailsArtist.js";
+import { updateArtistForm } from "./updateArtist.js";
 
 function showArtists(artists: Artist[]) {
     document.querySelector("#grid-area")!.innerHTML = "";
@@ -29,6 +30,13 @@ function showArtist(artist: Artist) {
         ?.addEventListener("click", () => {
             detailsArtist(artist);
             console.log(artist.name);
+        });
+
+    document
+        .querySelector("#grid-area article:last-child .item-btn-update")
+        ?.addEventListener("click", () => {
+            updateArtistForm(artist);
+            console.log("Update: " + artist.name);
         });
 }
 
