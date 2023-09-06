@@ -1,5 +1,6 @@
 import { detailsArtist } from "./detailsArtist.js";
 import { updateArtistForm } from "./updateArtist.js";
+import { favoriteClick, favorites } from "./favorites.js";
 
 function showArtists(artists: Artist[]) {
     document.querySelector("#grid-area")!.innerHTML = "";
@@ -25,6 +26,12 @@ function showArtist(artist: Artist) {
 
     document.querySelector("#grid-area")?.insertAdjacentHTML("beforeend", html);
 
+    if (favorites.includes(artist.id!)) {
+        document
+            .querySelector("#grid-area article:last-child .item-favicon")
+            ?.classList.add("favorite");
+    }
+
     document
         .querySelector("#grid-area article:last-child .item-btn-details")
         ?.addEventListener("click", () => {
@@ -37,6 +44,13 @@ function showArtist(artist: Artist) {
         ?.addEventListener("click", () => {
             updateArtistForm(artist);
             console.log("Update: " + artist.name);
+        });
+
+    document
+        .querySelector("#grid-area article:last-child .item-favicon")
+        ?.addEventListener("click", event => {
+            const heartElement: HTMLElement = event.target as HTMLElement;
+            favoriteClick(heartElement, artist);
         });
 }
 

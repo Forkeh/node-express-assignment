@@ -6,6 +6,7 @@ const btnCloseModal = document.querySelector("#btn-close-modal");
 const btnAddArtist = document.querySelector("#btn-add-artist");
 const sortDropDown = document.querySelector("#sort-dropdown");
 const filterDropdown = document.querySelector("#filter-dropdown");
+const searchBar = document.querySelector("#search-bar");
 
 function activateButtons() {
     btnCloseModal?.addEventListener("click", () => {
@@ -14,21 +15,11 @@ function activateButtons() {
 
     btnAddArtist?.addEventListener("click", addArtist);
 
-    sortDropDown?.addEventListener("change", (e: Event) => {
-        const target = e.target as HTMLSelectElement | null;
+    sortDropDown?.addEventListener("change", changeInSortOrFilter);
 
-        if (target) {
-            changeInSortOrFilter(target.value);
-        }
-    });
+    filterDropdown?.addEventListener("change", changeInSortOrFilter);
 
-    filterDropdown?.addEventListener("change", (e: Event) => {
-        const target = e.target as HTMLSelectElement | null;
-
-        if (target) {
-            changeInSortOrFilter(target.value);
-        }
-    });
+    searchBar?.addEventListener("input", changeInSortOrFilter);
 }
 
 function populateFilterGenres(artists: Artist[]) {

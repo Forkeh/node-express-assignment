@@ -1,6 +1,7 @@
 import { artists } from "../helpers/restAPI.js";
 import { showArtists } from "../artists/showArtists.js";
-function changeInSortOrFilter(sortOrFilterValue) {
+import { favorites } from "./favorites.js";
+function changeInSortOrFilter() {
     const filteredArtists = filter();
     const sortedArtists = sort(filteredArtists);
     showArtists(sortedArtists);
@@ -10,6 +11,8 @@ function filter() {
     const filterArray = [...artists];
     if (value === "none")
         return filterArray;
+    if (value === "favorites")
+        return filterArray.filter(artist => favorites.includes(artist.id));
     return filterArray.filter(artist => artist.genres.includes(value));
 }
 function sort(artists) {

@@ -110,10 +110,14 @@ footer {
     object-fit: cover;
 }
 
+.favorite {
+    color: red;
+}
+
 #grid-area article .item-favicon {
-    background-color: blueviolet;
     text-align: end;
     float: right;
+    cursor: pointer;
 }
 
 #grid-area article .item-btns-container {

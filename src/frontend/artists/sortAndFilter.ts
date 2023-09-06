@@ -1,7 +1,8 @@
 import { artists } from "../helpers/restAPI.js";
 import { showArtists } from "../artists/showArtists.js";
+import { favorites } from "./favorites.js";
 
-function changeInSortOrFilter(sortOrFilterValue: string) {
+function changeInSortOrFilter() {
     const filteredArtists = filter();
     const sortedArtists = sort(filteredArtists);
     showArtists(sortedArtists);
@@ -14,8 +15,27 @@ function filter(): Artist[] {
 
     const filterArray = [...artists];
     if (value === "none") return filterArray;
+    if (value === "favorites") return filterArray.filter(artist => favorites.includes(artist.id!));
     return filterArray.filter(artist => artist.genres.includes(value));
 }
+
+// function filterBySearch(artists: Artist[]) {
+//     const searchValue: string = (
+//         document.querySelector("#search-bar") as HTMLInputElement
+//     ).value;
+
+//     const filterSearchArray = artists.filter(artist => {
+//         Object.entries(artist).map(([key, value]) => {
+//             if (!["name", "genres", "labels"].includes(key)) return
+
+//             if(value.contains(searchValue))
+//             console.log(value);
+
+//         });
+//     });
+
+//     return artists;
+// }
 
 function sort(artists: Artist[]): Artist[] {
     const value: string = (
