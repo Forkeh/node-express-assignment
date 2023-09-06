@@ -1,6 +1,7 @@
 import { deleteArtistAPI, artists } from "../helpers/restAPI.js";
 import { showArtists } from "./showArtists.js";
 
+// Deletes artist, via DELETE API
 async function deleteArtist(artist: Artist) {
     console.log("Delete " + artist.name);
 

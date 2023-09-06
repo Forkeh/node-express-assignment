@@ -10,6 +10,7 @@ function showArtists(artists: Artist[]) {
     }
 }
 
+// Populates grid with artist "cards"
 function showArtist(artist: Artist) {
     const html = /*html*/ `
     <article>
@@ -26,12 +27,14 @@ function showArtist(artist: Artist) {
 
     document.querySelector("#grid-area")?.insertAdjacentHTML("beforeend", html);
 
+    // Turns on favorite icon, if artist is found in favorites array
     if (favorites.includes(artist.id!)) {
         document
             .querySelector("#grid-area article:last-child .item-favicon")
             ?.classList.add("favorite");
     }
 
+    // Button event listeners
     document
         .querySelector("#grid-area article:last-child .item-btn-details")
         ?.addEventListener("click", () => {

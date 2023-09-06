@@ -6,7 +6,7 @@ const btnAddArtist = document.querySelector("#btn-add-artist");
 const sortDropDown = document.querySelector("#sort-dropdown");
 const filterDropdown = document.querySelector("#filter-dropdown");
 const searchBar = document.querySelector("#search-bar");
-function activateButtons() {
+function initializeEventListeners() {
     btnCloseModal?.addEventListener("click", () => {
         modal.close();
     });
@@ -30,4 +30,8 @@ function populateFilterGenres(artists) {
         filterDropdown?.insertAdjacentHTML("beforeend", html);
     }
 }
-export { activateButtons, populateFilterGenres };
+function genresToArray(genres) {
+    const arr = genres.split(",").map(el => el.trim());
+    return arr;
+}
+export { initializeEventListeners, populateFilterGenres, genresToArray };

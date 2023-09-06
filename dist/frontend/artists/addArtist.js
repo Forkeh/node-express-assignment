@@ -1,6 +1,7 @@
 import { openModal, clearModal } from "../helpers/modal.js";
 import { createArtistAPI, artists } from "../helpers/restAPI.js";
 import { showArtists } from "./showArtists.js";
+import { genresToArray } from "../helpers/helpers.js";
 function addArtist() {
     clearModal();
     openModal();
@@ -75,10 +76,6 @@ async function createArtist(e) {
     }
     else {
         console.log("something went wrong");
-    }
-    function genresToArray(genres) {
-        const arr = genres.split(",").map(el => el.trim());
-        return arr;
     }
 }
 export { addArtist };

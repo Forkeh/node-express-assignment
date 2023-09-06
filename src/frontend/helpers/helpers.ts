@@ -8,7 +8,8 @@ const sortDropDown = document.querySelector("#sort-dropdown");
 const filterDropdown = document.querySelector("#filter-dropdown");
 const searchBar = document.querySelector("#search-bar");
 
-function activateButtons() {
+// Sets eventlisteners on page load
+function initializeEventListeners() {
     btnCloseModal?.addEventListener("click", () => {
         modal.close();
     });
@@ -22,6 +23,7 @@ function activateButtons() {
     searchBar?.addEventListener("input", changeInSortOrFilter);
 }
 
+// Dynamically fills filter dropdown with genres found on artists
 function populateFilterGenres(artists: Artist[]) {
     const genresSet: Set<string> = new Set();
 
@@ -39,14 +41,12 @@ function populateFilterGenres(artists: Artist[]) {
 
         filterDropdown?.insertAdjacentHTML("beforeend", html);
     }
-
-    // function convertGenreToValue(genre: string): string {
-    //     let convertedString = genre.toLocaleLowerCase();
-    //     if (convertedString.includes(" ")) {
-    //         return convertedString.replace(" ", "-");
-    //     }
-    //     return convertedString;
-    // }
 }
 
-export { activateButtons, populateFilterGenres };
+function genresToArray(genres: string): string[] {
+    const arr: string[] = genres.split(",").map(el => el.trim());
+
+    return arr;
+}
+
+export { initializeEventListeners, populateFilterGenres, genresToArray };

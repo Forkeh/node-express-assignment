@@ -1,7 +1,9 @@
 import { openModal, clearModal, closeModal } from "../helpers/modal.js";
 import { updateArtistAPI, artists } from "../helpers/restAPI.js";
 import { showArtists } from "./showArtists.js";
+import { genresToArray } from "../helpers/helpers.js";
 
+// Opens modal window, showing form with filled in values from artist
 function updateArtistForm(artist: Artist) {
     clearModal();
     openModal();
@@ -57,6 +59,7 @@ function updateArtistForm(artist: Artist) {
         .querySelector("#update-artist-form")
         ?.addEventListener("submit", updateArtist);
 
+    // Creates artist object with new values, sends to PUT API
     async function updateArtist(e: Event) {
         e.preventDefault();
 
@@ -81,12 +84,6 @@ function updateArtistForm(artist: Artist) {
             showArtists(artists);
         } else {
             console.log("something went wrong");
-        }
-
-        function genresToArray(genres: string): string[] {
-            const arr: string[] = genres.split(",").map(el => el.trim());
-
-            return arr;
         }
     }
 }

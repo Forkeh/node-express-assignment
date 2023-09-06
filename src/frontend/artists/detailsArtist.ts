@@ -1,6 +1,7 @@
 import { openModal, clearModal, closeModal } from "../helpers/modal.js";
 import { deleteArtist } from "./deleteArtist.js";
 
+// Shows model with artist details
 function detailsArtist(artist: Artist) {
     clearModal();
     openModal();
@@ -24,6 +25,7 @@ function detailsArtist(artist: Artist) {
     <button class="btn-delete-artist">Delete artist</button>
     `;
 
+    // Delete button event listener
     document
         .querySelector(".btn-delete-artist")
         ?.addEventListener("click", () => {

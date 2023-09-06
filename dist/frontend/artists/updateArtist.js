@@ -1,6 +1,7 @@
 import { openModal, clearModal } from "../helpers/modal.js";
 import { updateArtistAPI, artists } from "../helpers/restAPI.js";
 import { showArtists } from "./showArtists.js";
+import { genresToArray } from "../helpers/helpers.js";
 function updateArtistForm(artist) {
     clearModal();
     openModal();
@@ -73,10 +74,6 @@ function updateArtistForm(artist) {
         }
         else {
             console.log("something went wrong");
-        }
-        function genresToArray(genres) {
-            const arr = genres.split(",").map(el => el.trim());
-            return arr;
         }
     }
 }
