@@ -1,31 +1,46 @@
 import { artists } from "../helpers/restAPI.js";
+import { showArtists } from "../artists/showArtists.js";
 
 function changeInSortOrFilter(sortOrFilterValue: string) {
-    const value: string = sortOrFilterValue;
-    const sortedArtists = sort(value);
-    console.table(sortedArtists);
+    const filteredArtists = filter();
+    const sortedArtists = sort(filteredArtists);
+    showArtists(sortedArtists);
 }
 
-function sort(value: string) {
-    let sortedArtists;
+function filter(): Artist[] {
+    const value: string = (
+        document.querySelector("#filter-dropdown") as HTMLInputElement
+    ).value;
+
+    const filterArray = [...artists];
+    if (value === "none") return filterArray;
+    return filterArray.filter(artist => artist.genres.includes(value));
+}
+
+function sort(artists: Artist[]): Artist[] {
+    const value: string = (
+        document.querySelector("#sort-dropdown") as HTMLInputElement
+    ).value;
+
+    const sortArray = [...artists];
 
     switch (value) {
         case "name":
         case "birthdate":
-            sortedArtists = artists.sort((a: Artist, b: Artist) =>
+            sortArray.sort((a: Artist, b: Artist) =>
                 a[value].localeCompare(b[value])
             );
             break;
         case "activeSince":
-            sortedArtists = artists.sort(
+            sortArray.sort(
                 (a: Artist, b: Artist) => Number(a[value]) - Number(b[value])
             );
 
         default:
-            sortedArtists = artists;
+            sortArray;
             break;
     }
-    return sortedArtists;
+    return sortArray;
 }
 
 export { changeInSortOrFilter };

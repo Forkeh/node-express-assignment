@@ -1,6 +1,6 @@
 import { getArtistsAPI, artists } from "./helpers/restAPI.js";
 import { showArtists } from "./artists/showArtists.js";
-import { activateButtons } from "./helpers/helpers.js";
+import { activateButtons, populateFilterGenres } from "./helpers/helpers.js";
 
 window.addEventListener("load", app);
 
@@ -9,5 +9,6 @@ async function app() {
 
     showArtists(artists);
     activateButtons();
+    populateFilterGenres(artists);
 
 }
