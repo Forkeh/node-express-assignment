@@ -18,21 +18,20 @@
             <input type="text" name="search" placeholder="Search...">
             <div class="nav-item-container">
                 <label for="sort">Sort by</label>
-                <select name="sort" id="sort">
-                    <option value="">1</option>
-                    <option value="">2</option>
+                <select name="sort" id="sort-dropdown">
+                    <option value="none" selected></option>
+                    <option value="name">Name</option>
+                    <option value="activeSince">Active since</option>
+                    <option value="birthdate">Date of birth</option>
                 </select>
             </div>
             <div class="nav-item-container">
                 <label for="filter">Filter by</label>
-                <select name="filter" id="filter">
-                    <option value="">1</option>
+                <select name="filter" id="filter-dropdown">
+                    <option value="none" selected></option>
+                    <option value="favorites">Favorites</option>
                     <option value="">2</option>
                 </select>
-            </div>
-            <div class="nav-item-container">
-                <label for="checkbox-favorites">Only favorites</label>
-                <input type="checkbox" id="checkbox-favorites" value="is-favorite" name="favorite">
             </div>
             <button id="btn-add-artist">Add artist</button>
         </nav>

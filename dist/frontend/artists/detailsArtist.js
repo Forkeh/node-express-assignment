@@ -1,4 +1,5 @@
 import { openModal, clearModal } from "../helpers/modal.js";
+import { deleteArtist } from "./deleteArtist.js";
 function detailsArtist(artist) {
     clearModal();
     openModal();
@@ -16,6 +17,13 @@ function detailsArtist(artist) {
         <p><b>Website</b>: ${artist.website}</p>
         <p><b>Description:</b> ${artist.shortDescription}</p>
     </div>
+
+    <button class="btn-delete-artist">Delete artist</button>
     `;
+    document
+        .querySelector(".btn-delete-artist")
+        ?.addEventListener("click", () => {
+        deleteArtist(artist);
+    });
 }
 export { detailsArtist };
