@@ -42,21 +42,22 @@ h6 {
 }
 
 /*============= Global variables =============*/
+:root {
+    --black: #050505;
+    --off-white: #f5f5f5;
+}
 
 /*============= General styling =============*/
 
 body {
-    background-color: rgb(245, 245, 245);
-    color: rgb(5, 5, 5);
+    background-color: var(--off-white);
+    color: var(--black);
     font-family: "Yrsa", Courier, monospace;
 }
 
 header,
-nav,
-section,
-aside,
 footer {
-    /* outline: red solid 1px; */
+    padding: 3em 0;
 }
 
 h1 {
@@ -67,6 +68,42 @@ h2,
 h3,
 h4 {
     font-family: "David Libre", Courier, monospace;
+}
+
+input {
+    padding: 0.3em;
+    width: 250px;
+}
+
+select {
+    padding: 0.3em;
+    width: 150px;
+}
+
+button {
+    padding: 0.3em;
+}
+
+/*============= Add Artist Button =============*/
+
+#btn-add-artist {
+    background-color: var(--black);
+    color: var(--off-white);
+    font-size: larger;
+    font-weight: bolder;
+    padding: 0.5em;
+    width: 150px;
+    border-radius: 0.3em;
+    border: 0;
+    transition: ease-out 0.2s;
+}
+
+#btn-add-artist:hover {
+    background-color: #474747;
+}
+
+#btn-add-artist:active {
+    transform: scale(0.9);
 }
 
 /*============= Grid Layout =============*/
@@ -105,6 +142,14 @@ h4 {
     gap: 0, 5em;
 }
 
+#footer {
+    grid-area: footer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 4rem;
+}
+
 /*============= Article styling =============*/
 
 #grid-area article {
@@ -114,26 +159,33 @@ h4 {
     margin: 1em 1em;
     text-align: center;
     border-radius: 0.5rem;
-    padding: 1rem 2rem;
+    padding: 1rem 1.5rem;
     filter: drop-shadow(2px 2px 5px rgb(155, 155, 155));
     white-space: nowrap;
-    transition: all 0.2s ease-out;
+    /* transition: all 0.2s ease-out; */
 }
 
-#grid-area article:hover {
-    transform: scale(1.01);
+/* #grid-area article:hover {
+    transform: scale(1.005);
     filter: drop-shadow(3px 3px 7px rgb(155, 155, 155));
-}
+} */
 
 #grid-area article img {
     height: 250px;
     width: 200px;
     object-fit: cover;
     border-radius: 0.5rem;
+    margin-top: 1em;
+}
+
+.item-favicon {
+    color: rgb(148, 148, 148);
+    /* transition: ease-out 2s; */
 }
 
 .favorite {
     color: red;
+    /* transform: scale(1.1); */
 }
 
 #grid-area article .item-favicon {
@@ -146,15 +198,23 @@ h4 {
 #grid-area article .item-btns-container {
     margin: 1em;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
-#footer {
-    grid-area: footer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 4rem;
+.item-btn-details,
+.item-btn-update,
+#btn-close-modal {
+    background-color: var(--off-white);
+    border: 1px solid rgb(192, 192, 192);
+    padding: 0.2em 1em;
+    border-radius: 0.3em;
+    transition: ease-out 0.1s;
+}
+
+.item-btn-details:hover,
+.item-btn-update:hover,
+#btn-close-modal:hover {
+    background-color: #dfdfdf;
 }
 
 /*============= Modal General Styling =============*/
@@ -164,22 +224,59 @@ h4 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 500px;
-    height: 500px;
+    width: 600px;
+    /* height: 500px; */
+    background-color: var(--off-white);
+    border: 1px solid var(--black);
+    border-radius: 0.5em;
+    padding: 2em;
+    filter: drop-shadow(10px 10px 20px rgb(129, 129, 129));
+}
+
+#modal h2 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1em;
 }
 
 #btn-close-modal {
     float: right;
 }
 
-/*============= Modal Views =============*/
+/*============= Modal Detail View =============*/
+
+.detail-view-wrapper {
+    display: grid;
+    grid-template-columns: 4fr 3fr;
+    gap: 1em;
+    margin-bottom: 1em;
+}
 
 .detail-view-wrapper img {
+    justify-content: center;
+    height: 400px;
+    width: 300px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+#modal .modal-btn-wrapper {
     display: flex;
     justify-content: center;
-    height: 300px;
-    width: 200px;
-    object-fit: cover;
+    padding: 1em;
+}
+
+.btn-delete-artist {
+    background-color: rgb(224, 224, 224);
+    border: 1px solid rgb(192, 192, 192);
+    padding: 0.2em 1em;
+    border-radius: 0.3em;
+    transition: ease-out 0.1s;
+    font-size: larger;
+}
+
+.btn-delete-artist:hover {
+    background-color: rgb(255, 165, 165);
 }
 
 .add-view-wrapper {

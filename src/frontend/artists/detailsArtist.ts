@@ -10,19 +10,29 @@ function detailsArtist(artist: Artist) {
 
     modalContent!.innerHTML = /*html*/ `
 
+    <h2>${artist.name}</h2>
     <div class="detail-view-wrapper">
-        <h2>${artist.name}</h2>
-        <img src="${artist.image}"
-                alt="artist picture">
-        <p><b>Date of Birth:</b> ${artist.birthdate}</p>
-        <p><b>Active Since:</b> ${artist.activeSince}</p>
-        <p><b>Genres:</b> ${artist.genres.join(", ")}</p>
-        <p><b>Labels:</b> ${artist.labels}</p>
-        <p><b>Website</b>: ${artist.website}</p>
-        <p><b>Description:</b> ${artist.shortDescription}</p>
+        <aside class="detail-view-pic">
+            <img src="${artist.image}"
+                    alt="artist picture">
+        </aside>
+        <section class="detail-view-text">
+            <p><b>Date of Birth:</b></p> 
+            <p>${artist.birthdate}</p>
+            <p><b>Active Since:</b></p>
+             <p>${artist.activeSince}</p>
+            <p><b>Genres:</b></p>
+             <p>${artist.genres.join(", ")}</p>
+            <p><b>Labels:</b></p>
+             <p>${artist.labels}</p>
+            <p><b>Website</b>:</p>
+             <p>${artist.website}</p>
+            <p><b>Description:</b></p>
+            <p>${artist.shortDescription}</p>
+        </section>
     </div>
 
-    <button class="btn-delete-artist">Delete artist</button>
+    <div class="modal-btn-wrapper"><button class="btn-delete-artist">Delete artist</button></div>
     `;
 
     // Delete button event listener

@@ -44,7 +44,7 @@ function updateArtistForm(artist) {
         <input type="text" name="description" id="description" placeholder="Short description" value="${artist.shortDescription}">
     </div>
 
-    <input type="submit" value="Update Artist">
+    <div class="modal-btn-wrapper"><input type="submit" value="Update Artist"></div>
     </form>
     
     

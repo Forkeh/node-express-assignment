@@ -47,7 +47,7 @@ function addArtist() {
         <input type="text" name="description" id="description" placeholder="Short description">
     </div>
 
-    <input type="submit" value="Add Artist">
+    <div class="modal-btn-wrapper"><input type="submit" value="Add Artist"></div>
     </form>
     
     
