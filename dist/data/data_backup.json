@@ -41,7 +41,6 @@
         "labels": "Parkwood, Columbia",
         "website": "https://www.beyonce.com/",
         "image": "https://www.billboard.com/wp-content/uploads/2023/05/02-Beyonce-RENAISSANCE-WORLD-TOUR-Opening-Night-may-2023-billboard-1548.jpg?w=942&h=623&crop=1",
-
         "shortDescription": "Beyoncé is a pop icon who has dominated the music industry as a solo artist and as part of Destiny's Child, with her powerful vocals and stunning performances."
     },
     {
@@ -87,5 +86,16 @@
         "website": "https://www.rihannanow.com/",
         "image": "https://i.pinimg.com/736x/93/52/69/935269a5f79c60676d12e3f9b06c22bd.jpg",
         "shortDescription": "Rihanna is a multi-talented artist known for her distinctive voice, hit songs, and fashion influence."
+    },
+    {
+        "name": "Micgael Jackson",
+        "birthdate": "1958-08-29",
+        "activeSince": 1970,
+        "genres": ["Pop", "Soul", "Funk"],
+        "labels": "Steeltown, Motown,Epic Legacy, Sony, MJJ ",
+        "website": "https://www.michaeljackson.com/",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Michael_Jackson_Dangerous_World_Tour_1993.jpg/800px-Michael_Jackson_Dangerous_World_Tour_1993.jpg",
+        "shortDescription": "Michael Joseph Jackson (August 29, 1958 – June 25, 2009) was an American singer, songwriter, dancer, and philanthropist. Known as the \"King of Pop\", he is regarded as one of the most significant cultural figures of the 20th century. ",
+        "id": 1694088359929
     }
 ]
