@@ -30,7 +30,6 @@ function showArtist(artist) {
         .querySelector("#grid-area article:last-child .item-btn-details")
         ?.addEventListener("click", () => {
         detailsArtist(artist);
-        console.log(artist.name);
     });
     document
         .querySelector("#grid-area article:last-child .item-btn-update")

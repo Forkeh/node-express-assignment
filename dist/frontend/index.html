@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="#" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=David+Libre&family=Raleway&family=Yrsa:wght@300&display=swap"
+        rel="stylesheet">
     <title>Music Artists CRUD with Express</title>
 </head>
 
@@ -19,7 +23,7 @@
             <div class="nav-item-container">
                 <label for="sort">Sort by</label>
                 <select name="sort" id="sort-dropdown" autocomplete="off">
-                    <option value="none" selected></option>
+                    <option value="none" selected>None</option>
                     <option value="name">Name</option>
                     <option value="activeSince">Active since</option>
                     <option value="birthdate">Date of birth</option>
@@ -28,7 +32,7 @@
             <div class="nav-item-container">
                 <label for="filter">Filter by</label>
                 <select name="filter" id="filter-dropdown" autocomplete="off">
-                    <option value="none" selected></option>
+                    <option value="none" selected>None</option>
                     <option value="favorites">Favorites</option>
                     <!-- Insert filters dynamically -->
                 </select>
@@ -40,7 +44,7 @@
 
 
         </section>
-        <footer id="footer">Footer</footer>
+        <footer id="footer">Created by Brian Blume</footer>
 
         <!----------- Modal window ------------>
         <dialog id="modal">

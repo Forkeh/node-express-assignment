@@ -46,8 +46,9 @@ h6 {
 /*============= General styling =============*/
 
 body {
-    background-color: black;
-    color: antiquewhite;
+    background-color: rgb(245, 245, 245);
+    color: rgb(5, 5, 5);
+    font-family: "Yrsa", Courier, monospace;
 }
 
 header,
@@ -55,7 +56,17 @@ nav,
 section,
 aside,
 footer {
-    outline: red solid 1px;
+    /* outline: red solid 1px; */
+}
+
+h1 {
+    font-family: "Raleway", Courier, monospace;
+}
+
+h2,
+h3,
+h4 {
+    font-family: "David Libre", Courier, monospace;
 }
 
 /*============= Grid Layout =============*/
@@ -94,20 +105,31 @@ footer {
     gap: 0, 5em;
 }
 
+/*============= Article styling =============*/
+
 #grid-area article {
-    /* display: flex; */
     justify-content: center;
     padding: 0.5rem;
-    background-color: rgb(0, 40, 78);
-    height: 200px;
+    background-color: rgb(255, 255, 255);
     margin: 1em 1em;
     text-align: center;
+    border-radius: 0.5rem;
+    padding: 1rem 2rem;
+    filter: drop-shadow(2px 2px 5px rgb(155, 155, 155));
+    white-space: nowrap;
+    transition: all 0.2s ease-out;
+}
+
+#grid-area article:hover {
+    transform: scale(1.01);
+    filter: drop-shadow(3px 3px 7px rgb(155, 155, 155));
 }
 
 #grid-area article img {
-    height: 100px;
+    height: 250px;
     width: 200px;
     object-fit: cover;
+    border-radius: 0.5rem;
 }
 
 .favorite {
