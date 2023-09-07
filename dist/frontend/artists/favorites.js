@@ -4,8 +4,7 @@ function favoriteClick(heartElement, artist) {
     heartElement.classList.toggle("favorite");
     if (heartElement.classList.contains("favorite")) {
         favorites.push(artist.id);
-    }
-    else {
+    } else {
         const indexOfId = favorites.findIndex(id => id === artist.id);
         favorites.splice(indexOfId, 1);
     }
@@ -18,6 +17,8 @@ function writeLocalStorage() {
 }
 function readLocalStorage() {
     const retString = localStorage.getItem("favorites");
-    favorites = JSON.parse(retString);
+    if (retString) {
+        favorites = JSON.parse(retString);
+    }
 }
 export { favoriteClick, readLocalStorage, favorites };
