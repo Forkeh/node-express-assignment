@@ -1,4 +1,4 @@
-import { openModal, clearModal } from "../helpers/modal.js";
+import { openModal, clearModal, closeModal } from "../helpers/modal.js";
 import { createArtistAPI, artists } from "../helpers/restAPI.js";
 import { showArtists } from "./showArtists.js";
 import { genresToArray } from "../helpers/helpers.js";
@@ -72,6 +72,7 @@ async function createArtist(e) {
     const response = await createArtistAPI(newArtist);
     if (response.ok) {
         console.log("added artist");
+        closeModal();
         showArtists(artists);
     }
     else {

@@ -3,7 +3,8 @@ import { showArtists } from "../artists/showArtists.js";
 import { favorites } from "./favorites.js";
 function changeInSortOrFilter() {
     const filteredArtists = filter();
-    const sortedArtists = sort(filteredArtists);
+    const searchedArtists = filterBySearch(filteredArtists);
+    const sortedArtists = sort(searchedArtists);
     showArtists(sortedArtists);
 }
 function filter() {
@@ -14,6 +15,24 @@ function filter() {
     if (value === "favorites")
         return filterArray.filter(artist => favorites.includes(artist.id));
     return filterArray.filter(artist => artist.genres.includes(value));
+}
+function filterBySearch(artists) {
+    const searchValue = document.querySelector("#search-bar").value;
+    const filterSearchArray = artists.filter(artist => {
+        for (const key in artist) {
+            if (!["name", "labels", "genres"].includes(key))
+                continue;
+            const value = artist[key];
+            if (typeof value === "string" &&
+                value.toLowerCase().includes(searchValue))
+                return true;
+            if (Array.isArray(value) &&
+                value.some(index => index.toLowerCase().includes(searchValue)))
+                return true;
+        }
+        return false;
+    });
+    return filterSearchArray;
 }
 function sort(artists) {
     const value = document.querySelector("#sort-dropdown").value;

@@ -80,6 +80,7 @@ async function createArtist(e: Event) {
 
     if (response.ok) {
         console.log("added artist");
+        closeModal();
         showArtists(artists);
     } else {
         console.log("something went wrong");

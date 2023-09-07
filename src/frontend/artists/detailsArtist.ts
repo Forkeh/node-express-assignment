@@ -1,4 +1,4 @@
-import { openModal, clearModal, closeModal } from "../helpers/modal.js";
+import { openModal, clearModal } from "../helpers/modal.js";
 import { deleteArtist } from "./deleteArtist.js";
 
 // Shows model with artist details

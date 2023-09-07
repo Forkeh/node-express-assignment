@@ -81,6 +81,7 @@ function updateArtistForm(artist: Artist) {
 
         if (response.ok) {
             console.log("Updated artist" + artist.name);
+            closeModal();
             showArtists(artists);
         } else {
             console.log("something went wrong");

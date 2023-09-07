@@ -1,5 +1,6 @@
 import fs from "fs/promises";
 
+//----- GET list of all artists  ----- //
 export async function getAllArtists(req: any, res: any) {
     try {
         const data: string = await fs.readFile("./dist/data/data.json", "utf8");
@@ -13,6 +14,7 @@ export async function getAllArtists(req: any, res: any) {
     }
 }
 
+//----- POST new artist to list of artists ----- //
 export async function createArtist(req: any, res: any) {
     try {
         const newArtist: Artist = req.body;
@@ -33,6 +35,7 @@ export async function createArtist(req: any, res: any) {
     }
 }
 
+//----- PUT (overwrites/changes) existing artist in list ----- //
 export async function updateArtist(req: any, res: any) {
     try {
         const id: number = Number(req.params.id);
@@ -67,6 +70,7 @@ export async function updateArtist(req: any, res: any) {
     }
 }
 
+//----- DELETE artist from artists list ----- //
 export async function deleteArtist(req: any, res: any) {
     try {
         const id: number = Number(req.params.id);

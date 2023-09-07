@@ -5,7 +5,8 @@ import { favorites } from "./favorites.js";
 // Executes whenever sort of filter is changed
 function changeInSortOrFilter() {
     const filteredArtists = filter();
-    const sortedArtists = sort(filteredArtists);
+    const searchedArtists = filterBySearch(filteredArtists);
+    const sortedArtists = sort(searchedArtists);
     showArtists(sortedArtists);
 }
 
@@ -22,23 +23,31 @@ function filter(): Artist[] {
     return filterArray.filter(artist => artist.genres.includes(value));
 }
 
-// function filterBySearch(artists: Artist[]) {
-//     const searchValue: string = (
-//         document.querySelector("#search-bar") as HTMLInputElement
-//     ).value;
+function filterBySearch(artists: Artist[]) {
+    const searchValue: string = (
+        document.querySelector("#search-bar") as HTMLInputElement
+    ).value;
 
-//     const filterSearchArray = artists.filter(artist => {
-//         Object.entries(artist).map(([key, value]) => {
-//             if (!["name", "genres", "labels"].includes(key)) return
+    const filterSearchArray = artists.filter(artist => {
+        for (const key in artist) {
+            if (!["name", "labels", "genres"].includes(key)) continue;
+            const value = artist[key];
+            if (
+                typeof value === "string" &&
+                value.toLowerCase().includes(searchValue)
+            )
+                return true;
 
-//             if(value.contains(searchValue))
-//             console.log(value);
-
-//         });
-//     });
-
-//     return artists;
-// }
+            if (
+                Array.isArray(value) &&
+                value.some(index => index.toLowerCase().includes(searchValue))
+            )
+                return true;
+        }
+        return false;
+    });
+    return filterSearchArray;
+}
 
 // Sorts artists by dropdown value
 function sort(artists: Artist[]): Artist[] {

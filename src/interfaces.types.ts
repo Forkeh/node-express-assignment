@@ -1,4 +1,5 @@
 interface Artist {
+    [key: string]: string | string[] | number | undefined;
     name: string;
     birthdate: string;
     activeSince: number;

@@ -1,4 +1,4 @@
-import { openModal, clearModal } from "../helpers/modal.js";
+import { openModal, clearModal, closeModal } from "../helpers/modal.js";
 import { updateArtistAPI, artists } from "../helpers/restAPI.js";
 import { showArtists } from "./showArtists.js";
 import { genresToArray } from "../helpers/helpers.js";
@@ -70,6 +70,7 @@ function updateArtistForm(artist) {
         const response = await updateArtistAPI(updatedArtist);
         if (response.ok) {
             console.log("Updated artist" + artist.name);
+            closeModal();
             showArtists(artists);
         }
         else {

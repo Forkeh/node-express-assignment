@@ -1,4 +1,4 @@
-import { getArtistsAPI, artists } from "./helpers/restAPI.js";
+import { getArtistsAPI } from "./helpers/restAPI.js";
 import { showArtists } from "./artists/showArtists.js";
 import {
     initializeEventListeners,
