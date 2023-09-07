@@ -45,7 +45,6 @@ function showArtist(artist: Artist) {
         .querySelector("#grid-area article:last-child .item-btn-update")
         ?.addEventListener("click", () => {
             updateArtistForm(artist);
-            console.log("Update: " + artist.name);
         });
 
     document

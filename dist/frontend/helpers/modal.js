@@ -1,6 +1,8 @@
+import { scrollToTop } from "./helpers.js";
 function openModal() {
     const modal = document.querySelector("#modal");
     modal.showModal();
+    scrollToTop();
 }
 function closeModal() {
     const modal = document.querySelector("#modal");

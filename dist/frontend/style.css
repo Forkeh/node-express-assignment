@@ -49,6 +49,7 @@ h6 {
 
 /*============= General styling =============*/
 
+
 body {
     background-color: var(--off-white);
     color: var(--black);
@@ -244,6 +245,7 @@ button {
     padding: 2em;
     filter: drop-shadow(10px 10px 20px rgb(129, 129, 129));
     animation: fade-in 0.2s ease-out;
+    
 }
 
 #modal h2 {

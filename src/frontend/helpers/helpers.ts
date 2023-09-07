@@ -49,4 +49,11 @@ function genresToArray(genres: string): string[] {
     return arr;
 }
 
-export { initializeEventListeners, populateFilterGenres, genresToArray };
+function scrollToTop() {
+    console.log("scroll");
+    
+    window.scrollTo({top: 0, behavior: "smooth"});
+
+}
+
+export { initializeEventListeners, populateFilterGenres, genresToArray, scrollToTop };

@@ -35,7 +35,6 @@ function showArtist(artist) {
         .querySelector("#grid-area article:last-child .item-btn-update")
         ?.addEventListener("click", () => {
         updateArtistForm(artist);
-        console.log("Update: " + artist.name);
     });
     document
         .querySelector("#grid-area article:last-child .item-favicon")

@@ -66,7 +66,6 @@ function updateArtistForm(artist: Artist) {
         const response = await updateArtistAPI(updatedArtist);
 
         if (response.ok) {
-            console.log("Updated artist" + artist.name);
             closeModal();
             showArtists(artists);
         } else {
