@@ -1,10 +1,10 @@
 # Music artist app using Node.js and Express
 
-Music artist database, with CRUD functionality, sort and filters options and the ability to add an artist to favorites.
+Music artists database with CRUD functionality. Includes search, sort and filter options, plus the ability to add an artist to your favorites, which you then can filter by.
 
 ## Installation
 
-Install dependencies with npm:
+Install dependencies:
 
 ```bash
   npm install
@@ -13,7 +13,7 @@ Install dependencies with npm:
 Start server:
 
 ```bash
-  npm run dev
+  npm start
 ```
 
-Open index.html with LiveServer
+Open `distr/frontend/index.html` with LiveServer
