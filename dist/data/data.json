@@ -97,5 +97,60 @@
         "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Michael_Jackson_Dangerous_World_Tour_1993.jpg/800px-Michael_Jackson_Dangerous_World_Tour_1993.jpg",
         "shortDescription": "Michael Joseph Jackson (August 29, 1958 – June 25, 2009) was an American singer, songwriter, dancer, and philanthropist. Known as the \"King of Pop\", he is regarded as one of the most significant cultural figures of the 20th century. ",
         "id": 1694088359929
+    },
+    {
+        "id": 1234576,
+        "name": "Drake",
+        "birthdate": "1986-10-24",
+        "activeSince": 2006,
+        "genres": ["Hip hop", "R&B", "Pop"],
+        "labels": "OVO Sound, Republic, Young Money, Cash Money",
+        "website": "https://drakeofficial.com/",
+        "image": "https://media1.popsugar-assets.com/files/thumbor/zan-t_Me63if8oqWYE9ENiPLlhA/0x224:2826x3050/fit-in/2048xorig/filters:format_auto-!!-:strip_icc-!!-/2020/02/11/894/n/1922398/87f6bb525e430e7bd44e40.22278576_/i/Drake.jpg",
+        "shortDescription": "Drake is a Canadian rapper, singer, songwriter, and record producer who has dominated the music charts with his versatile and catchy songs."
+    },
+    {
+        "id": 2345612,
+        "name": "Adele",
+        "birthdate": "1988-05-05",
+        "activeSince": 2006,
+        "genres": ["Soul", "Pop", "Blue-eyed soul"],
+        "labels": "XL, Columbia",
+        "website": "https://adele.com/",
+        "image": "https://hips.hearstapps.com/hmg-prod/images/adele-in-schiaparelli-custom-haute-couture-2-1669023204.jpg",
+        "shortDescription": "Adele is a British singer-songwriter who has won multiple Grammy Awards and sold millions of albums worldwide with her powerful and emotive voice."
+    },
+    {
+        "id": 3456777,
+        "name": "Lady Gaga",
+        "birthdate": "1986-03-28",
+        "activeSince": 2005,
+        "genres": ["Pop", "Dance", "Electronic"],
+        "labels": "Interscope, Streamline, Kon Live, Cherrytree",
+        "website": "https://www.ladygaga.com/",
+        "image": "https://yt3.googleusercontent.com/NWcJuY_6lVq9OhynDBzMwjXIoCMZFaayPDupKDX02z7JOIs4Q28gtXjkCoh-TvV_1gbanb5pTQ=s900-c-k-c0x00ffffff-no-rj",
+        "shortDescription": "Lady Gaga is an American singer, songwriter, actress, and activist who has influenced pop culture with her innovative and diverse music and style."
+    },
+    {
+        "id": 45678111,
+        "name": "Justin Bieber",
+        "birthdate": "1994-03-01",
+        "activeSince": 2008,
+        "genres": ["Pop", "R&B"],
+        "labels": "Def Jam,RBMG,School Boy",
+        "website": "https://www.justinbiebermusic.com/",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Justin-Bieber.jpg/1200px-Justin-Bieber.jpg",
+        "shortDescription": "Justin Bieber is a Canadian singer, songwriter, and multi-instrumentalist who rose to fame as a teen sensation and has become one of the most successful and influential artists of his generation."
+    },
+    {
+        "id": 56789,
+        "name": "Ariana Grande",
+        "birthdate": "1993-06-26",
+        "activeSince": "2008",
+        "genres": ["Pop", "R&B"],
+        "labels": "Republic",
+        "website": "https://www.arianagrande.com/",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Ariana_Grande_Grammys_Red_Carpet_2020.png",
+        "shortDescription": "Ariana Grande is an American singer, songwriter, and actress who has achieved global success with her distinctive vocal range and catchy pop songs."
     }
 ]

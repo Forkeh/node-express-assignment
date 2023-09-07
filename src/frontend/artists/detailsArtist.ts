@@ -26,7 +26,7 @@ function detailsArtist(artist: Artist) {
             <p><b>Labels:</b></p>
              <p>${artist.labels}</p>
             <p><b>Website</b>:</p>
-             <p>${artist.website}</p>
+             <p><a href="${artist.website}"> ${artist.website}</a></p>
             <p><b>Description:</b></p>
             <p>${artist.shortDescription}</p>
         </section>

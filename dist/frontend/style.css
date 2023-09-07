@@ -63,12 +63,22 @@ footer {
 
 h1 {
     font-family: "Raleway", Courier, monospace;
+    font-weight: 900;
 }
 
 h2,
 h3,
 h4 {
     font-family: "David Libre", Courier, monospace;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(100, 0, 0);
 }
 
 input {
@@ -164,7 +174,7 @@ button {
     filter: drop-shadow(2px 2px 5px rgb(155, 155, 155));
     white-space: nowrap;
     /* transition: all 0.2s ease-out; */
-    animation: fade-in 0.3s ease-out;
+    /* animation: fade-in 0.3s ease-out; */
 }
 
 /* #grid-area article:hover {
@@ -278,6 +288,7 @@ button {
     border-radius: 0.3em;
     transition: ease-out 0.1s;
     font-size: larger;
+    margin-top: 1em;
 }
 
 .btn-delete-artist:hover {
