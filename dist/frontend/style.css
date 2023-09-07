@@ -53,6 +53,7 @@ body {
     background-color: var(--off-white);
     color: var(--black);
     font-family: "Yrsa", Courier, monospace;
+    animation: fade-in 0.3s ease-out;
 }
 
 header,
@@ -163,6 +164,7 @@ button {
     filter: drop-shadow(2px 2px 5px rgb(155, 155, 155));
     white-space: nowrap;
     /* transition: all 0.2s ease-out; */
+    animation: fade-in 0.3s ease-out;
 }
 
 /* #grid-area article:hover {
@@ -231,6 +233,7 @@ button {
     border-radius: 0.5em;
     padding: 2em;
     filter: drop-shadow(10px 10px 20px rgb(129, 129, 129));
+    animation: fade-in 0.2s ease-out;
 }
 
 #modal h2 {
@@ -266,7 +269,9 @@ button {
     padding: 1em;
 }
 
-.btn-delete-artist {
+.btn-delete-artist,
+.btn-add-artist,
+.btn-update-artist {
     background-color: rgb(224, 224, 224);
     border: 1px solid rgb(192, 192, 192);
     padding: 0.2em 1em;
@@ -279,14 +284,25 @@ button {
     background-color: rgb(255, 165, 165);
 }
 
-.add-view-wrapper {
+/*============= Modal Add/Update View =============*/
+
+.modal-form-wrapper {
     display: flex;
-    flex-direction: column;
-    /* justify-content: center; */
-    /* align-items: end; */
+    justify-content: center;
 }
 
-/*============= media queries =============*/
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 0.2em;
+}
+
+.btn-add-artist:hover,
+.btn-update-artist:hover {
+    background-color: rgb(206, 206, 206);
+}
+
+/*============= Media Queries =============*/
 
 @media (max-width: 479px) {
     #grid-area {
@@ -315,5 +331,16 @@ button {
 @media (min-width: 1201px) {
     #grid-area {
         grid-template-columns: repeat(6, 1fr);
+    }
+}
+
+/*============= Animations =============*/
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
     }
 }

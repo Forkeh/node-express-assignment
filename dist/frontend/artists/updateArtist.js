@@ -9,42 +9,28 @@ function updateArtistForm(artist) {
     modalContent.innerHTML = `
 
     <h2>Update Artist</h2>
-    <div class="update-view-wrapper">
+    <div class="modal-form-wrapper">
     <form id="update-artist-form">
-    <div>
-        <label for="fullName">Name</label>
-        <input type="text" name="fullName" id="fullName" value="${artist.name}">
-    </div>
-    <div>
-        <label for="dob">Birthdate</label>
-        <input type="date" name="dob" id="dob" value="${artist.birthdate}">
-    </div>
-    <div>
-        <label for="activeSince">Active Since</label>
-        <input type="number" name="activeSince" id="activeSince" value="${artist.activeSince}">
-    </div>
-    <div>
-        <label for="genres">Genres</label>
-        <input type="text" name="genres" id="genres" placeholder="Seperate by comma" value="${artist.genres}">
-    </div>
-    <div>
-        <label for="labels">Labels</label>
-        <input type="text" name="labels" id="labels" placeholder="Seperate by comma" value="${artist.labels}">
-    </div>
-    <div>
-        <label for="website">Website</label>
-        <input type="url" name="website" id="website" placeholder="URL" value="${artist.website}">
-    </div>
-    <div>
-        <label for="image">Image</label>
-        <input type="url" name="image" id="image" placeholder="URL" value="${artist.image}">
-    </div>
-    <div>
-        <label for="description">Description</label>
-        <input type="text" name="description" id="description" placeholder="Short description" value="${artist.shortDescription}">
-    </div>
+        <div class="form-grid">
+            <label for="fullName">Name</label>
+            <input type="text" name="fullName" id="fullName" value="${artist.name}">
+            <label for="dob">Birthdate</label>
+            <input type="date" name="dob" id="dob" value="${artist.birthdate}">
+            <label for="activeSince">Active Since</label>
+            <input type="number" name="activeSince" id="activeSince" value="${artist.activeSince}">
+            <label for="genres">Genres</label>
+            <input type="text" name="genres" id="genres" placeholder="Seperate by comma" value="${artist.genres}">
+            <label for="labels">Labels</label>
+            <input type="text" name="labels" id="labels" placeholder="Seperate by comma" value="${artist.labels}">
+            <label for="website">Website</label>
+            <input type="url" name="website" id="website" placeholder="URL" value="${artist.website}">
+            <label for="image">Image</label>
+            <input type="url" name="image" id="image" placeholder="URL" value="${artist.image}">
+            <label for="description">Description</label>
+            <input type="text" name="description" id="description" placeholder="Short description" value="${artist.shortDescription}">
+        </div>
 
-    <div class="modal-btn-wrapper"><input type="submit" value="Update Artist"></div>
+    <div class="modal-btn-wrapper"><input type="submit" class="btn-update-artist" value="Update Artist">
     </form>
     
     
