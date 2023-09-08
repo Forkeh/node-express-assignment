@@ -18,6 +18,8 @@ function writeLocalStorage() {
 }
 function readLocalStorage() {
     const retString = localStorage.getItem("favorites");
-    favorites = JSON.parse(retString);
+    if (retString) {
+        favorites = JSON.parse(retString);
+    }
 }
 export { favoriteClick, readLocalStorage, favorites };
