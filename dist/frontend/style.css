@@ -191,6 +191,7 @@ button {
 
 .item-favicon {
     color: rgb(148, 148, 148);
+    font-size: x-large;
     /* transition: ease-out 2s; */
 }
 

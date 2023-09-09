@@ -152,5 +152,16 @@
         "website": "https://www.arianagrande.com/",
         "image": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Ariana_Grande_Grammys_Red_Carpet_2020.png",
         "shortDescription": "Ariana Grande is an American singer, songwriter, and actress who has achieved global success with her distinctive vocal range and catchy pop songs."
+    },
+    {
+        "name": "Jamiroquai",
+        "birthdate": "1969-12-30",
+        "activeSince": 1986,
+        "genres": ["R&B", "soul", "alternative rock", "funk", "acid jazz"],
+        "labels": "Acid Jazz",
+        "website": "https://www.jamiroquai.com/",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Jamiroquai_2018_Coachella18W1-157_%2842013516212%29_%28cropped%29.jpg/800px-Jamiroquai_2018_Coachella18W1-157_%2842013516212%29_%28cropped%29.jpg",
+        "shortDescription": "Singer",
+        "id": 1694251054292
     }
 ]

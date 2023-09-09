@@ -24,7 +24,7 @@ function populateFilterGenres(artists) {
     }
     for (const genre of genresSet) {
         const html = `
-        <option value="${genre}">${genre}</option>
+        <option value="${genre}">${genre.charAt(0).toLocaleUpperCase() + genre.slice(1)}</option>
         
         `;
         filterDropdown?.insertAdjacentHTML("beforeend", html);
