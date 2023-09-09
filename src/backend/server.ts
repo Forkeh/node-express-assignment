@@ -14,13 +14,13 @@ const port = 3000;
 //----- Middleware ----- //
 app.use(express.json());
 app.use(cors());
-app.use(express.static('/dist/frontend'))
+app.use(express.static('./dist/frontend'))
+
 
 //----- Start server on chosen port ----- //
 app.listen(port, () => {
     console.log(`Server is running on ${port}!`);
 });
-
 
 //----- GET root url ----- //
 app.get("/", (req, res) => {
