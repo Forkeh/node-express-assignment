@@ -1,8 +1,10 @@
 import { detailsArtist } from "./detailsArtist.js";
 import { updateArtistForm } from "./updateArtist.js";
 import { favoriteClick, favorites } from "./favorites.js";
+// import { artists, getArtistsAPI } from "../helpers/restAPI.js";
 
-function showArtists(artists: Artist[]) {
+function showArtists(artists: Artist[]) {    
+
     document.querySelector("#grid-area")!.innerHTML = "";
 
     for (const artist of artists) {

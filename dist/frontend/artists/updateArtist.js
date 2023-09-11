@@ -1,7 +1,6 @@
 import { openModal, clearModal, closeModal } from "../helpers/modal.js";
-import { updateArtistAPI, artists } from "../helpers/restAPI.js";
-import { showArtists } from "./showArtists.js";
-import { genresToArray } from "../helpers/helpers.js";
+import { updateArtistAPI } from "../helpers/restAPI.js";
+import { genresToArray, refreshView } from "../helpers/helpers.js";
 function updateArtistForm(artist) {
     clearModal();
     openModal();
@@ -55,8 +54,9 @@ function updateArtistForm(artist) {
         };
         const response = await updateArtistAPI(updatedArtist);
         if (response.ok) {
+            console.log("update response ok");
             closeModal();
-            showArtists(artists);
+            refreshView();
         }
         else {
             console.log("something went wrong");

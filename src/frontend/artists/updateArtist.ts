@@ -1,7 +1,6 @@
 import { openModal, clearModal, closeModal } from "../helpers/modal.js";
-import { updateArtistAPI, artists } from "../helpers/restAPI.js";
-import { showArtists } from "./showArtists.js";
-import { genresToArray } from "../helpers/helpers.js";
+import { updateArtistAPI } from "../helpers/restAPI.js";
+import { genresToArray, refreshView } from "../helpers/helpers.js";
 
 // Opens modal window, showing form with filled in values from artist
 function updateArtistForm(artist: Artist) {
@@ -66,8 +65,10 @@ function updateArtistForm(artist: Artist) {
         const response = await updateArtistAPI(updatedArtist);
 
         if (response.ok) {
+            console.log("update response ok");
+
             closeModal();
-            showArtists(artists);
+            refreshView()
         } else {
             console.log("something went wrong");
         }

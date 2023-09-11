@@ -1,7 +1,6 @@
 import { openModal, clearModal, closeModal } from "../helpers/modal.js";
-import { createArtistAPI, artists } from "../helpers/restAPI.js";
-import { showArtists } from "./showArtists.js";
-import { genresToArray } from "../helpers/helpers.js";
+import { createArtistAPI } from "../helpers/restAPI.js";
+import { genresToArray, refreshView } from "../helpers/helpers.js";
 function addArtist() {
     clearModal();
     openModal();
@@ -59,7 +58,7 @@ async function createArtist(e) {
     if (response.ok) {
         console.log("added artist");
         closeModal();
-        showArtists(artists);
+        refreshView();
     }
     else {
         console.log("something went wrong");

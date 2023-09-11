@@ -1,12 +1,12 @@
-import { deleteArtistAPI, artists } from "../helpers/restAPI.js";
-import { showArtists } from "./showArtists.js";
+import { deleteArtistAPI } from "../helpers/restAPI.js";
 import { closeModal } from "../helpers/modal.js";
+import { refreshView } from "../helpers/helpers.js";
 async function deleteArtist(artist) {
     console.log("Delete " + artist.name);
     const response = await deleteArtistAPI(artist);
     if (response.ok) {
         closeModal();
-        showArtists(artists);
+        refreshView();
     }
     else {
         console.log("Something went wrong with DELETE request");
