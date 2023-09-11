@@ -36,14 +36,7 @@ async function refreshView() {
 function populateFilterGenres(artists: Artist[]) {
     filterDropdown!.innerHTML = "";
 
-    const genresSet: Set<string> = new Set();
-
-    for (const artist of artists) {
-        artist.genres.forEach(genre => {
-            genresSet.add(genre);
-        });
-    }
-
+    // Adds constant filter options first
     const noneAndFavs = /*html*/ `
     <option value="none" selected>None</option>
     <option value="favorites">Favorites</option>
@@ -51,6 +44,14 @@ function populateFilterGenres(artists: Artist[]) {
 
     filterDropdown?.insertAdjacentHTML("beforeend", noneAndFavs);
 
+    // Dynamically populates rest of filter with genres
+    const genresSet: Set<string> = new Set();
+
+    for (const artist of artists) {
+        artist.genres.forEach(genre => {
+            genresSet.add(genre);
+        });
+    }
 
     for (const genre of genresSet) {
         const html = /*html*/ `

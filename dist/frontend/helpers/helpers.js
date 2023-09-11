@@ -24,17 +24,17 @@ async function refreshView() {
 }
 function populateFilterGenres(artists) {
     filterDropdown.innerHTML = "";
+    const noneAndFavs = `
+    <option value="none" selected>None</option>
+    <option value="favorites">Favorites</option>
+    `;
+    filterDropdown?.insertAdjacentHTML("beforeend", noneAndFavs);
     const genresSet = new Set();
     for (const artist of artists) {
         artist.genres.forEach(genre => {
             genresSet.add(genre);
         });
     }
-    const noneAndFavs = `
-    <option value="none" selected>None</option>
-    <option value="favorites">Favorites</option>
-    `;
-    filterDropdown?.insertAdjacentHTML("beforeend", noneAndFavs);
     for (const genre of genresSet) {
         const html = `
         <option value="${genre}">${genre.charAt(0).toLocaleUpperCase() + genre.slice(1)}</option>
